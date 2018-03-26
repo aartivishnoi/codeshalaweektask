@@ -1,0 +1,50 @@
+		#code{
+			font-family: 'PT Sans', sans-serif;
+			font-size: 30px;
+		}
+ 		.row{
+ 			background-color:  #d6d6c2;
+       
+		}
+		#logo{
+			color:white;
+      margin-left: 0px;
+		}
+		#text{
+			font-size: 20px;
+		}
+		#contest{
+			font-size: 25px;
+
+		}
+		#right-panel{
+			background-color:#1f2e2e;
+		}
+
+#footer{
+  background-color: black;
+  text-align: center;
+  height: 150px;
+  margin-top: 20px;
+}
+    .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      color: white;
+      height: 35px;
+      cursor:pointer;
+      background-color:#33383b;
+      border-radius:2px;
+      font-size:20px;
+      color:#ffffff;
+     text-align:center;
+     line-height:35px;
+      margin-right:3px;
+    }
+    .company{
+      color:#e8f5e9;
+      font-size:14px;
+      font-weight:500;
+      margin:0;
+      margin-top: 10px;
+    }

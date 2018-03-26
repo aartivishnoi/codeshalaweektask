@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>taskoftheweek</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	</head>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-secondary" id="nav">
+
+   		<a class="navbar-brand" href="#"><img src="https://production.cdmycdn.com/webpack/44e01805165bfde4e6e4322c540abf81.svg" width="250px;" height="40px;" id="logo"></a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  		</button>
+  	
+  		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    			<ul class="navbar-nav">
+      				<li class="nav-item active">
+        				<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      				</li>
+      				 <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign-up/Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LoginModal">Login</a>
+          <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#Sign-upModal" >Sign-up</a>
+        </div>
+      </li>
+       				<li class="nav-item">
+        				<a class="nav-link" href="#">About Us</a>
+      				</li>
+       				<li class="nav-item">
+        				<a class="nav-link" href="#">Contact Us</a>
+				</li>
+    			</ul>
+    			    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  			</div>
+		</nav>
+
+
+		  <!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Existing User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="Sign-upModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">New User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+    <label for="exampleInputEmail1">Full Name</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-9" id="code"><link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">Codeacademy
+				<div class="row"><div class="col-lg-9"  id="text">Lets get better at programming
+				</div>
+			</div>
+
+			<div class="row">
+
+ 				<ul class="nav nav-tabs">
+  					<li class="nav-item">
+    						<a class="nav-link active" href="#" id="contest">LIVE CONTEST</a>
+  					</li>
+  					<li class="nav-item">
+    						<a class="nav-link" href="#" id="contest">UPCOMING</a>
+  					</li>
+  					<li class="nav-item">
+    						<a class="nav-link" href="#" id="contest">HACKATHONS</a>
+  					</li>
+				</ul>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem;">
+
+   						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2QwGX1b6vK3Im7AgDY2RTMobW3EUB3PPVusPqt75eJdqdTp-J   " alt="Card image cap">
+  						<div class="card-body">
+    							<h5 class="card-title">DAUNTING PROBLEMS     <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">TIMINGS<br>Ends in 51:22:00</p>
+    							<a href="#" class="btn btn-primary">Start Now</a>
+  						</div>
+					</div>
+
+				</div>
+
+
+				<div class="col-lg-1"></div>
+
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem; height: 100%;">
+
+   						<img class="card-img-top" src=" https://www.openbsd.org/images/hackathons/a2k17.gif" alt="Card image cap" height="170px;">
+  						<div class="card-body"><br>
+    							<h5 class="card-title">SHERLOCK    <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">TIMINGS<br>Ends in:48:22:00</p>
+    							<a href="#" class="btn btn-primary">Start Now</a>
+  						</div>
+					</div>
+				</div>
+
+  	
+
+
+		<div class="col-l"></div>	
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem;">
+
+   						<img class="card-img-top" src="https://thumb1.shutterstock.com/display_pic_with_logo/2817721/457236244/stock-vector-join-programming-hackathon-457236244.jpg " alt="Card image cap">
+  						<div class="card-body">
+    							<h5 class="card-title">HACK THE NORTH    <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">Starts on:SEPT 17,9:00 PM</p>
+    							<a href="#" class="btn btn-primary">Register Now</a>
+  						</div>
+					</div>
+
+				</div>
+
+ 				<div class="col-lg-1"></div>
+
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem; height: 100%;">
+
+   						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaE14LmvD_1ISP3ZP9ktQjRnMwpf-B74Qiv0vUr7HPNL3_etLK5Q" alt="Card image cap" height="155px;">
+  						<div class="card-body">
+   	 						<h5 class="card-title">MOBILITY    <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">Starts on: 17 Nov, 8:00PM</p>
+   							<a href="#" class="btn btn-primary">Register Now</a>
+  						</div>
+					</div>
+
+				</div>
+
+ 				<div class="col-l"></div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem;">
+  						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ56Rb7hsvlAkn414KSlc7q4Dhe_goUmV6F7KOf8kRePG4aV28k5g" alt="Card image cap">
+  						<div class="card-body">
+    							<h5 class="card-title">GRAPHIC DIVIDEND <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">Starts On: 17 OCT, 9:00 AM</p>
+    							<a href="#" class="btn btn-primary">Rgister Now</a>
+  						</div>
+					</div>
+				</div>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem; height: 100%;">
+  						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlFpU77ZLAVCr6Z6c5zif6MJcnzteYPHpTPFFIme6G1eAMkgYx" alt="Card image cap" height="215px">
+  						<div class="card-body">
+  	 	 					<h5 class="card-title">JOLT  <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">Starts On: 11 May, 5:00 PM</p>
+    							<a href="#" class="btn btn-primary">Register Now</a>
+  						</div>
+					</div>
+				</div>
+				<div class="col-l"></div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem; height: 100%;">
+  						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdKWmIAUiTCD1oGthc63cLD-_MJwYJRn5_tfZjNZHc5UZegtSzUg" alt="Card image cap" height="200px";>
+  						<div class="card-body">
+    							<h5 class="card-title">HACKYRPI  <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">TIMINGS<br>Ends In:55:22:00</p>
+    							<a href="#" class="btn btn-primary">Start Now</a>
+  						</div>
+					</div>
+				</div>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+					<div class="card" style="width: 18rem; ">
+  						<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpORoB5Gx6e6306VTXRtdWyfmpOxqu7TMVhuqIO8yDRQEEz26Zg" alt="Card image cap" height="230px">
+  						<div class="card-body">
+    							<h5 class="card-title">LEIDOSCOPE  <i class="far fa-star"></i></h5>
+    							<p class="card-text" id="time">Starts On: 27 June, 9:00 AM</p>
+    							<a href="#" class="btn btn-primary">Register Now</a>
+  						</div>
+					</div>
+				</div>
+				<div class="col-l"></div>
+			</div>
+		</div>
+		<div class="col-lg-3" id="right-panel">
+			<span id="font">Advertisement</span>
+ 			<img src="https://thumb9.shutterstock.com/display_pic_with_logo/2117717/309964772/stock-photo-ad-advertisement-marketing-commercial-concept-309964772.jpg" class="rounded" alt="Cinque Terre" width="300px" height="200px">  
+            		<br><br>
+            		<div id="accordion">
+  				<div class="card">
+    					<div class="card-header" id="headingOne">
+      						<h5 class="mb-0">
+        						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          						Read Our Notes
+        						</button>
+      						</h5>
+    					</div>
+    					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      						<div class="card-body">
+        					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. 
+      						</div>
+    					</div>
+  				</div>
+				<br>
+
+
+					<div class="card">
+    					<div class="card-header" id="headingTwo">
+      						<h5 class="mb-0">
+        						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          						Discussion Forms
+        						</button>
+      						</h5>
+    					</div>
+    					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      						<div class="card-body">
+        					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+      						</div>
+    					</div>
+  				</div>
+			</div>
+			<br>
+
+				<div id="accordion2">
+  				<div class="card">
+    					<div class="card-header" id="headingThree">
+      						<h5 class="mb-0">
+        						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          						Your BookMarks
+        						</button>
+      						</h5>
+    					</div>
+    					<div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion2">
+      						<div class="card-body">
+        						<ul class="list-group list-group-flush">
+  								<li class="list-group-item">Sed imperdiet metus in </li>
+  								<li class="list-group-item">nulla pellentesque condimentum.</li>
+  								<li class="list-group-item">Maecenas egestas metus non libero </li>
+  								<li class="list-group-item">eleifend, vitae accumsan ex iaculis</li>
+  								<li class="list-group-item">vehicula vehicula non placerat felis.</li>
+							</ul>
+      						</div>
+    					</div>
+  				</div>
+			</div>
+			<br>
+
+
+				<div id="accordion3">
+  				<div class="card">
+    					<div class="card-header" id="headingFour">
+      						<h5 class="mb-0">
+        						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+          						Trends
+        						</button>
+      						</h5>
+    					</div>
+    					<div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion3">
+      						<div class="card-body">
+        						<ul class="list-group list-group-flush">
+  								<li class="list-group-item">Cras justo odio</li>
+  								<li class="list-group-item">Dapibus ac facilisis in</li>
+  								<li class="list-group-item">Morbi leo risus</li>
+  								<li class="list-group-item">Porta ac consectetur ac</li>
+  								<li class="list-group-item">Vestibulum at eros</li>
+							</ul>
+      						</div>
+    					</div>
+  				</div>
+			</div>
+			<br>				
+
+
+					<div id="accordion4">
+  				<div class="card">
+    					<div class="card-header" id="headingFive">
+      						<h5 class="mb-0">
+        						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          						Notifications
+        						</button>
+      						</h5>
+    					</div>
+    					<div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordion4">
+      						<div class="card-body">
+        						<ul class="list-group list-group-flush">
+  								<li class="list-group-item">Cras justo odio</li>
+  								<li class="list-group-item">Dapibus ac facilisis in</li>
+  								<li class="list-group-item">Morbi leo risus</li>
+  								<li class="list-group-item">Porta ac consectetur ac</li>
+  								<li class="list-group-item">Vestibulum at eros</li>
+							</ul>
+      						</div>
+    					</div>
+  				</div>
+			</div>
+		</div>
+
+</div>
+
+<div class="row">
+      <div class="col-lg-12" id="footer">
+      <p class="company">&copy; 2018 yourls.in&nbsp;&nbsp;&nbsp;All Rights Reserved.<br>Contact Us: bishnoiaarti970@gmail.com</p>
+      <br>
+      <div class="footer-icons">
+    <a><i class="fab fa-facebook" style="color: #ffffff"></i></a>
+    <a><i class="fab fa-github-square" style="color: #ffffff"></i></a>
+    <a><i class="fa fa-envelope" style="color: #ffffff"></i></a>
+    <a><i class="fab fa-twitter-square" style="color: #ffffff"></i></a>
+</div>
+
+      </div>
+    </div>
+
+
+
+	
+
+<!--footer-->
+	
+</body>
+ </html>
+
+</body>
+</html>
